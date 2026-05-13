@@ -1,5 +1,5 @@
 "use strict";
-import { questions } from "./questions.js";
+import { questions } from "../questions.js";
 
 const UI = {
   startQuizDiv: document.getElementById("startQuizDiv"),
