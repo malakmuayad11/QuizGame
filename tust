@@ -1,0 +1,47 @@
+[33mcommit e4bdbba38bd3dafd98f61a9bbaa42e9745047cbe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: f9d5b99 28fb18c
+Author: Malak Abu-Omar <malakmuayad15@gmail.com>
+Date:   Wed May 13 18:07:19 2026 +0300
+
+    Merge branch 'main' of github.com:malakmuayad11/QuizGame
+
+[33mcommit f9d5b99726950d6ff3be294620fda0ed797ca5b4[m
+Author: Malak Abu-Omar <malakmuayad15@gmail.com>
+Date:   Wed May 13 18:06:51 2026 +0300
+
+    Edited script src file
+
+[33mcommit 28fb18c6cf88c78bc928f41bb0e959824f915efe[m
+Author: Malak Muayad <malakmuayad11@gmail.com>
+Date:   Sun Mar 29 17:01:01 2026 +0300
+
+    Add screenshots section to README
+    
+    Added screenshots to README for better visualization.
+
+[33mcommit f02fa37df092ad75be3ed04dbdecd8e789190302[m
+Merge: 28750c7 c3cd948
+Author: malakmuayad14 <=>
+Date:   Sun Mar 29 16:58:13 2026 +0300
+
+    Merge remote changes
+
+[33mcommit 28750c763502af995c09267d850dd2300003420e[m
+Author: malakmuayad14 <=>
+Date:   Sun Mar 29 16:56:26 2026 +0300
+
+    Added screenshots of the project
+
+[33mcommit c3cd948d32da6df5fc269f3dc16b86386c71b196[m
+Author: Malak Muayad <malakmuayad11@gmail.com>
+Date:   Sun Mar 29 16:50:59 2026 +0300
+
+    Create README for Quiz Game project
+    
+    Added README with project overview, features, technologies, and author information.
+
+[33mcommit 565dee286b308e649e5649a1f7a7e5fe1960bd05[m
+Author: malakmuayad14 <=>
+Date:   Sun Mar 29 16:30:49 2026 +0300
+
+    Added Project's files
