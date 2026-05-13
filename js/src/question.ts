@@ -1,6 +1,6 @@
 "use strict";
 
-export class question {
+export class Question {
   #_id = 0;
   #_q = "";
   #_answers = [];
