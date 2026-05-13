@@ -1,47 +1,47 @@
 "use strict";
-import { questions } from "../questions.js";
+import { questions } from "../src/questions.js";
 
 const UI = {
-  startQuizDiv: document.getElementById("startQuizDiv"),
-  startQuizBtn: document.getElementById("startQuizBtn"),
-  questionDiv: document.getElementById("questionDiv"),
-  nextBtn: document.getElementById("nextBtn"),
-  restartBtn: document.getElementById("restartBtn"),
+  startQuizDiv: document.getElementById("startQuizDiv") as HTMLDivElement,
+  startQuizBtn: document.getElementById("startQuizBtn") as HTMLButtonElement,
+  questionDiv: document.getElementById("questionDiv") as HTMLDivElement,
+  nextBtn: document.getElementById("nextBtn") as HTMLButtonElement,
+  restartBtn: document.getElementById("restartBtn") as HTMLButtonElement,
 };
 
-let currentQuestion = 1;
-let score = 0;
-let answered = false;
+let currentQuestion: number = 1;
+let score: number = 0;
+let answered: boolean = false;
 
-function startQuiz() {
+function startQuiz(): void {
   UI.startQuizDiv.style.display = "none";
   UI.questionDiv.style.display = "grid";
   UI.questionDiv.innerHTML = loadQuestion(1);
   UI.nextBtn.style.display = "block";
 }
 
-function loadQuestion(questionID) {
+function loadQuestion(questionID: number): string {
   currentQuestion = questionID;
 
   if (currentQuestion > questions.length) return showResults();
 
-  return `<h2>${questions[questionID - 1].q}</h2>
+  return `<h2>${questions[questionID - 1]!.q}</h2>
   <p class="muted">Question ${questionID} of ${questions.length}</p>
   <p class="muted" style="justify-self: end">Score ${score}</p>
   ${loadAnswers(questionID)}`;
 }
 
-function loadAnswers(questionID) {
+function loadAnswers(questionID: number): string {
   answered = false;
-  let result = "";
-  const answers = questions[questionID - 1].answers;
+  let result: string = "";
+  const answers = questions[questionID - 1]!.answers;
   for (let a of answers) {
     result += `<p class="answer">${escapeHTML(a)}</p>`;
   }
   return result;
 }
 
-function escapeHTML(str) {
+function escapeHTML(str: string): string {
   return str
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -50,7 +50,7 @@ function escapeHTML(str) {
     .replaceAll("'", "&#039;");
 }
 
-function showResults() {
+function showResults(): string {
   UI.nextBtn.style.display = "none";
   UI.restartBtn.style.display = "block";
   return `<h2>Quiz Result</h2>
@@ -58,26 +58,34 @@ function showResults() {
   <p class ="result">${getStatus()}</p>`;
 }
 
-function getStatus() {
-  if (score >= 80) return "Intelligent";
-  if (score >= 60) return "Average";
-  if (score >= 40) return "Below Average";
-  return "Needs Improvement";
+enum Status {
+  Intelligent = "Intelligent",
+  Average = "Average",
+  BelowAverage = "Below Average",
+  NeedsImprovement = "Needs Improvement",
 }
 
-function showAnswerStatus() {
+function getStatus(): Status {
+  if (score >= 80) return Status.Intelligent;
+  if (score >= 60) return Status.Average;
+  if (score >= 40) return Status.BelowAverage;
+  return Status.NeedsImprovement;
+}
+
+function showAnswerStatus(): void {
   const selectedAnswer = document.querySelector(".selected");
+  if (!selectedAnswer) return;
 
   if (
-    questions[currentQuestion - 1].isSelectedAnswerCorrect(
-      selectedAnswer.textContent,
+    questions[currentQuestion - 1]!.isSelectedAnswerCorrect(
+      Number(selectedAnswer.textContent),
     )
   )
     selectedAnswer.classList.add("correctAnswer");
   else selectedAnswer.classList.add("wrongAnswer");
 }
 
-function displayNextQuestion() {
+function displayNextQuestion(): void {
   if (document.querySelectorAll(".selected").length === 0) {
     alert("Please choose an answer to move to next question!");
     return;
@@ -90,7 +98,7 @@ function displayNextQuestion() {
   }, 1500);
 }
 
-function restart() {
+function restart(): void {
   UI.restartBtn.style.display = "none";
   currentQuestion = 0;
   score = 0;
@@ -101,15 +109,17 @@ UI.startQuizBtn.addEventListener("click", startQuiz);
 UI.nextBtn.addEventListener("click", displayNextQuestion);
 
 UI.questionDiv.addEventListener("click", (e) => {
-  if (e.target.matches("p") && !answered) {
+  const target = e.target as HTMLElement;
+
+  if (target.matches("p") && !answered) {
     document.querySelectorAll(".selected").forEach((s) => {
       s.classList.remove("selected");
     });
-    e.target.classList.add("selected");
+    target.classList.add("selected");
 
     if (
-      questions[currentQuestion - 1].isSelectedAnswerCorrect(
-        e.target.textContent,
+      questions[currentQuestion - 1]!.isSelectedAnswerCorrect(
+        Number(target.textContent),
       )
     )
       score += 20;
