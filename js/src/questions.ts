@@ -2,19 +2,19 @@
 
 import { question } from "./question.js";
 
-const q1 = new question(
+const q1: question = new question(
   1,
   "What is the capital of France?",
   ["Berlin", "Madrid", "Paris", "Rome"],
   3,
 );
-const q2 = new question(
+const q2: question = new question(
   2,
   "Which language runs in the browser?",
   ["C#", "Java", "Python", "JavaScript"],
   4,
 );
-const q3 = new question(
+const q3: question = new question(
   3,
   "What does CSS stand for?",
   [
@@ -25,13 +25,18 @@ const q3 = new question(
   ],
   2,
 );
-const q4 = new question(4, "What is 5 + 7?", ["10", "11", "12", "13"], 3);
+const q4: question = new question(
+  4,
+  "What is 5 + 7?",
+  ["10", "11", "12", "13"],
+  3,
+);
 
-const q5 = new question(
+const q5: question = new question(
   5,
   "Which HTML tag is used for the largest heading?",
   ["<h6>", "<heading>", "<h1>", "<head>"],
   3,
 );
 
-export const questions = [q1, q2, q3, q4, q5];
+export const questions: question[] = [q1, q2, q3, q4, q5];
