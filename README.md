@@ -21,6 +21,13 @@ A Front-end web application built with HTML, CSS, and JavaScript (vanilla JS). T
    git clone https://github.com/malakmuayad11/QuizGame.git
 2. Open index.html in your browser.
 
+## 📸 Screenshots
+
+![Quiz Screen](./screenshots/startQuiz.png)
+![Correct Answer Screen](./screenshots/correctAnswer.png)
+![Wrong Answer Screen](./screenshots/wrongAnswer.png)
+![Result Screen](./screenshots/results.png)
+
 ## 👩‍💻 Author
 **Malak Muayad**  
 📧 [malakmuayad15@gmail.com](mailto:malakmuayad15@gmail.com)  
