@@ -27,12 +27,6 @@
 //   }
 // }
 export class Question {
-    get correntAnswer() {
-        return this._correctAnswer;
-    }
-    set correntAnswer(value) {
-        this._correctAnswer = value;
-    }
     get answers() {
         return this._answers;
     }
@@ -51,11 +45,12 @@ export class Question {
     set id(value) {
         this._id = value;
     }
-    constructor(_id, _q, _answers, _correctAnswer) {
+    constructor(_id, _q, _answers, correctAnswer) {
         this._id = _id;
         this._q = _q;
         this._answers = _answers;
-        this._correctAnswer = _correctAnswer;
+        this.correctAnswer = correctAnswer;
+        this._correctAnswer = this._answers[correctAnswer - 1];
     }
     isSelectedAnswerCorrect(currentQuestion) {
         return currentQuestion === this._correctAnswer;

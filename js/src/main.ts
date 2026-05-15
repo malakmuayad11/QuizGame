@@ -78,7 +78,7 @@ function showAnswerStatus(): void {
 
   if (
     questions[currentQuestion - 1]!.isSelectedAnswerCorrect(
-      Number(selectedAnswer.textContent),
+      selectedAnswer.textContent,
     )
   )
     selectedAnswer.classList.add("correctAnswer");
@@ -119,7 +119,7 @@ UI.questionDiv.addEventListener("click", (e) => {
 
     if (
       questions[currentQuestion - 1]!.isSelectedAnswerCorrect(
-        Number(target.textContent),
+        target.textContent,
       )
     )
       score += 20;

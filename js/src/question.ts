@@ -31,12 +31,8 @@
 // }
 
 export class Question {
-  public get correntAnswer(): number {
-    return this._correctAnswer;
-  }
-  public set correntAnswer(value: number) {
-    this._correctAnswer = value;
-  }
+  private _correctAnswer: string | undefined;
+
   public get answers(): string[] {
     return this._answers;
   }
@@ -59,10 +55,12 @@ export class Question {
     private _id: number,
     private _q: string,
     private _answers: string[],
-    private _correctAnswer: number,
-  ) {}
+    private correctAnswer: number,
+  ) {
+    this._correctAnswer = this._answers[correctAnswer - 1];
+  }
 
-  public isSelectedAnswerCorrect(currentQuestion: number): boolean {
+  public isSelectedAnswerCorrect(currentQuestion: string): boolean {
     return currentQuestion === this._correctAnswer;
   }
 }
