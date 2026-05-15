@@ -11,7 +11,7 @@ A responsive quiz web application built using vanilla JavaScript and TypeScript 
 - 📱Responsive design techniques, to adapt to different screen sizes.
 
 ## 🚀 Live Demo (Deployment)
-[Try it here]([https://your-link.com](https://malakmuayad11.github.io/QuizGame/))
+[Try it here](https://malakmuayad11.github.io/QuizGame/)
 
 ## ⚙️ Technologies:
 - HTML
