@@ -23,7 +23,7 @@ A Front-end web application built with HTML, CSS, and JavaScript (vanilla JS). T
 
 ## 📸 Screenshots
 
-![Quiz Screen](./screenshots/startQuiz.png)
+![Quiz Screen](./screenshots/main.png)
 ![Correct Answer Screen](./screenshots/correctAnswer.png)
 ![Wrong Answer Screen](./screenshots/wrongAnswer.png)
 ![Result Screen](./screenshots/results.png)
