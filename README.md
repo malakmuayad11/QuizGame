@@ -26,7 +26,7 @@ A responsive quiz web application built using vanilla JavaScript and TypeScript 
 The project is live and accessible here:
 
 🔗 **Live Demo:**  
-https://your-live-url-here
+[Quiz Game](https://malakmuayad11.github.io/QuizGame/)
 
 ### Deployment Platform
 - GitHub Pages
