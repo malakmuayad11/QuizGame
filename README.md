@@ -10,9 +10,6 @@ A responsive quiz web application built using vanilla JavaScript and TypeScript 
 - 💯 Shows the final score with a status message.
 - 📱Responsive design techniques, to adapt to different screen sizes.
 
-## 🚀 Live Demo (Deployment)
-[Try it here](https://malakmuayad11.github.io/QuizGame/)
-
 ## ⚙️ Technologies:
 - HTML
 - CSS
