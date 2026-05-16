@@ -1,8 +1,8 @@
 # ⁉️ Quiz Game (Vanilla JavaScript)
-A Front-end web application built with HTML, CSS, and JavaScript (vanilla JS). The application displays questions, tracks the score, and displays results.
+A responsive quiz web application built using vanilla JavaScript and TypeScript that tests user knowledge through multiple-choice questions with real-time scoring and feedback.
 
 ## ✅ Features
-- ❓ Displays questions with multiple choice answers (from fixed dataset).
+- ❓ Displays multiple-choice questions from a predefined dataset.
 - 🏁 Checks the selected answer by the user.
 - 🎨 Highlights answers in green (correct) or red (wrong) to improve user experience.
 - 🔒 Prevents multiple selections for the same question.
@@ -14,6 +14,7 @@ A Front-end web application built with HTML, CSS, and JavaScript (vanilla JS). T
 - HTML
 - CSS
 - Vanilla JavaScript
+- TypeScript
 
 ## 🚀 How to Run
 1. Clone the repository:
@@ -23,7 +24,7 @@ A Front-end web application built with HTML, CSS, and JavaScript (vanilla JS). T
 
 ## 📸 Screenshots
 
-![Quiz Screen](./screenshots/startQuiz.png)
+![Quiz Screen](./screenshots/main.png)
 ![Correct Answer Screen](./screenshots/correctAnswer.png)
 ![Wrong Answer Screen](./screenshots/wrongAnswer.png)
 ![Result Screen](./screenshots/results.png)
