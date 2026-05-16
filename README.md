@@ -22,6 +22,15 @@ A responsive quiz web application built using vanilla JavaScript and TypeScript 
    git clone https://github.com/malakmuayad11/QuizGame.git
 2. Open index.html in your browser.
 
+## 🚀 Deployment
+The project is live and accessible here:
+
+🔗 **Live Demo:**  
+https://your-live-url-here
+
+### Deployment Platform
+- GitHub Pages
+
 ## 📸 Screenshots
 
 ![Quiz Screen](./screenshots/main.png)
